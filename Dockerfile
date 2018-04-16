@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get install --yes bitcoind make && \
     rm -rf /var/lib/apt/lists/*
 
-ADD . /bitcoin
+COPY . /bitcoin
 WORKDIR /bitcoin
 
 # expose two rpc ports for the nodes to allow outside container access
